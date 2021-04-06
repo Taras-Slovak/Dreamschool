@@ -1,0 +1,18 @@
+.text {
+  text-align: center;
+  font-family: 'HelveticaRegular';
+  line-height: 26px;
+
+  &__header {
+    color: #324d5b;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  &__body {
+    margin-top: 31px;
+    color: #6a6a6a;
+    font-size: 17px;
+    line-height: 26px;
+  }
+}

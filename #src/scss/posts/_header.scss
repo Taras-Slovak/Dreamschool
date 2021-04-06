@@ -1,0 +1,17 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+/*<===================**********--HEADER--**********===================> */
+
+.header {
+    width: 100%;
+    
+}
+
+.index-svg{
+    display: none;
+}
+
+
+@import "../blog/nav-bar";

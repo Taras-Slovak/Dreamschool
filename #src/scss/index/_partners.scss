@@ -1,0 +1,49 @@
+@import '../mixins/mixin-font-size.scss';
+
+/*<===================**********--PARTNERS--**********===================> */
+
+.partners {
+    width: 100%;
+    margin-top: 4rem;
+    
+
+    &__title {
+        text-align: center;
+        @include font-size(42, 30);
+        color: white;
+        font-weight: 300;
+        filter: drop-shadow(1px 1px 2px #000000);
+    }
+
+
+    &__group {
+        margin: 4rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        align-items: center;
+        justify-items: center;
+
+        @media only screen and (max-width:770px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-column-gap: 2px;
+            grid-row-gap: 2px;
+        }
+
+        // @media only screen and (max-width:450px) {
+        //     grid-template-columns: 1fr;
+        //     grid-template-rows: 1fr 1fr 1fr 1fr;
+        // }
+
+    }
+
+    &__img {
+        display: block;
+        @include width(135, 100);
+        height: auto;
+
+    }
+}

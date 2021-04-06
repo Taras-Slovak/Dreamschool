@@ -1,0 +1,182 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+/*<===================**********--MAIN--**********===================> */
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.publication {
+    @include margin-top(240, 100);
+    flex-basis: 75%;
+    margin-right: auto;
+
+
+    @media only screen and (max-width: 1200px) {
+        flex-basis: 100%;
+
+    }
+
+
+    &__title {
+        @include font-size(54, 28);
+        @include line-height (75, 35);
+        font-weight: 300;
+        text-align: center;
+        color: rgb(54, 54, 54);
+        text-shadow: 1px 1px 4px rgba(30, 30, 30, 0.6);
+    }
+
+    @media only screen and (max-width: 1200px) {
+        flex-basis: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__btn {
+        display: block;
+        width: max-content;
+        @include margin(35, 25);
+        margin-right: auto;
+        padding: 0.4em 0.8em 0.4em 0.8em;
+        @include font-size(20, 18);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+        background-color: rgb(33, 119, 189);
+        border-radius: 10px;
+        transition: all 0.4s;
+        box-shadow: 0px 0px 5px 4px #25252526;
+
+        &:hover {
+            background-color: gold;
+            color: black;
+            box-shadow: 0px 0px 5px 4px #65c04a5d;
+        }
+
+        &:active {
+
+            transform: scale(0.95);
+        }
+    }
+
+}
+
+.news-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    @include margin-top(80, 20);
+
+    &__item {
+        @include width (640, 50);
+        @include margin(15, 10);
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.185);
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        &:hover .news-list__date {
+            opacity: 1;
+        }
+
+        @media only screen and (max-width: 1400px) {
+            width: 80%;
+    
+        }
+
+        @media only screen and (max-width: 1200px) {
+            flex-grow: 1;
+            flex-basis: 400px;
+            max-width:750px;
+    
+        }
+
+
+    }
+
+    &__date {
+        position: absolute;
+        padding: 10px;
+        z-index: 50;
+        border-radius: 12px 0 12px 0;
+        background-color: rgba(240, 240, 240, 0.829);
+        color: rgba(0, 0, 0, 0.801);
+        font-weight: 500;
+        opacity: 0;
+        transition: all 0.5s;
+
+    }
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+        border-radius: 12px 12px 0 0;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        @include padding(15, 10);
+        text-align: center;
+        @include font-size(22, 20);
+        @include line-height (27, 23);
+        color: rgba(0, 0, 0, 0.808);
+        font-weight: 400;
+    }
+
+
+
+
+    &__introductory {
+        padding: 0 1em;
+        @include font-size(18, 16);
+        font-weight: 300;
+        color: black;
+    }
+
+    p {
+        padding-bottom: 1em;
+        @include line-height (22, 18);
+    }
+
+}
+
+.sidebar {
+    @include padding-top(220, 90);
+    @include padding-left(30, 5);
+    @include padding-right(30, 5);
+    @include padding-bottom(30, 5);
+    flex-basis: 25%;
+    flex-grow: 1;
+    min-width: 420px;
+
+    @media only screen and (max-width: 1200px) {
+        margin-top: 2em;
+        padding-bottom: 100px;
+        max-width: 90%;
+        min-width: 320px;
+    }
+}
+
+@import '../news/_sidebar.scss';

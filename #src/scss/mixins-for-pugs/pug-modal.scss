@@ -1,0 +1,110 @@
+@import '../mixins/mixin-font-size.scss';
+
+/*<===================**********--MODAL--**********===================> */
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .25s, transform .6s;
+
+    @media only screen and (max-height: 600px) {
+        overflow: scroll;
+    }
+    
+    &__content {
+        position: relative;
+        max-width: 95%;
+        width: max-content;
+        background-color: #e9e9e9;
+        margin-top: 4%;
+        margin-left: auto;
+        margin-right: auto;
+        @include padding(30, 10);
+        border-radius: 20px;
+
+        @media only screen and (max-height: 600px) {
+            border-radius: 10px;
+        }
+    }
+
+    &__video {
+        max-width: 800px;
+        width: 100%;
+        margin: auto;
+        padding: 5px;
+        video {
+            width: 100% ;
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s;
+           
+            &:hover {
+                box-shadow: 0px 0px 15px 6px rgba(0, 183, 255, 0.12)
+            }
+        }
+    }
+
+
+    &__btn {
+        position: relative;
+        display:block;
+        width: max-content;
+        margin: auto;
+        padding: 10px 20px;
+        @include font-size(20, 16);
+        font-weight: 300;
+        line-height: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 255px;
+        border: 2px solid #90e158;
+        transition: transform .1s ease;
+        transform: scale(1);
+
+        &:hover {
+            color: #00ff00;
+            border: 2px solid #00ff00;
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        right: 10px;
+        @include font-size(45, 40);
+        font-weight: 400;
+        color: #d41313e7;
+        
+        transition: .3s;
+
+        &:hover,
+        &:focus {
+            color: green;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+._removeScrole {
+    overflow: hidden;
+}
+
+._visibility {
+    opacity: 1;
+    transform: scale(1);
+    background: rgba(0, 0, 0, 0.5);
+
+}

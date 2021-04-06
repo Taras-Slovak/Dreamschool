@@ -1,0 +1,20 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+/*<===================**********--PUBLICATION--**********===================> */
+
+
+.post-flex {
+    @include margin-top(50, 30);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media only screen and (max-width: 680px) {
+        justify-content: center;
+    }
+
+}
+
+@import '../mixins-for-pugs/pug-preview.scss'

@@ -1,0 +1,128 @@
+@import '../mixins/mixin-font-size.scss';
+
+/*<===================**********--FORM--**********===================> */
+
+.form {
+    @include margin-top(0, 25);
+    max-width: max-content;
+    margin: auto;
+    padding: 1rem;
+        
+    &__title {
+        padding: 0 25px;
+        text-align: center;
+        @include font-size(28, 20);
+        font-weight: 300;
+        line-height: 25px;
+    }
+
+    &__txt {
+        max-width: 600px;
+        margin: 2em auto 0px auto;
+        text-align: center;
+        @include font-size(16, 14);
+        line-height: 22px;
+        font-weight: 400;
+    }
+
+    &__item {
+        @include width(350, 250);
+        @include margin-top(45, 25);
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    &__input {
+        padding-left: 10px;
+        border-radius: 25px;
+        height: 40px;
+        width:  100%;
+        transition: all 0.3s ease;
+        filter: drop-shadow(0px 0px 5px #414141);
+
+
+        &[type=text],
+        &[type=tel]:valid {
+            filter: drop-shadow(0px 0px 5px #41a513);
+        }
+
+        &:invalid {
+            filter: drop-shadow(0px 0px 5px #be1725);
+        }
+
+        &:focus {
+
+            filter: drop-shadow(0px 0px 5px #06cdff);
+        }
+    }
+
+
+    &__label {
+        position: absolute;
+        left: 25%;
+        top: 10px;
+        @include font-size(18, 14);
+        font-weight: 200;
+        transition: all 0.3s ease;
+        pointer-events: none;
+
+    }
+
+    &__btn {
+        display: block;
+        @include margin-top(40, 15);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.4em 0.9em;
+        @include font-size(20, 14);
+        font-weight: 300;
+        color: #000000;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 255px;
+        border: 2px solid #90e158;
+        transition: all .2s ease;
+        transform: scale(1);
+
+        &:hover {
+            background-color: #90e158;
+            color: white;
+
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+}
+
+.alert {
+    margin-top: 1em;
+    margin-bottom: -1rem;
+    text-align: center;
+    font-weight: 400;
+    @include font-size(18, 16);
+    line-height: 22px;
+}
+
+.alert-success{
+    color: green;
+}
+
+.alert-danger{
+    color: red;
+} 
+
+.invalid-feedback{
+    display: block;
+    margin-top: -10px;
+    @include margin-bottom(18, 12);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 18px;
+    color: #fd9001;
+    font-size: 14px;
+    font-weight: 400;
+}

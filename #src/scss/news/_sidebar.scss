@@ -1,0 +1,90 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+/*<===================**********--SIDEBAR--**********===================> */
+
+@import "../includes/search.scss";
+
+.announcement {
+    position: relative;
+    @include margin-top(30, 25);
+    margin-left: 5px;
+    margin-right: 5px;
+    
+ 
+
+    &::before {
+        position: absolute;
+        width: 100%;
+        content: '';
+        border-bottom: 1px solid #000;
+        @media only screen and (max-width: 1200px) {
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+    }
+
+    &__title {
+        text-align: left;
+        @include font-size(30, 28);
+        @include line-height(70, 60);
+        font-weight: 300;
+        text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.6);
+
+        @media only screen and (max-width: 1200px) {
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    &__txt {
+        @include padding(20, 15);
+        text-align: center;
+        @include font-size(24, 20);
+        @include line-height(38, 35);
+        font-style: italic;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+        
+    }
+}
+
+// @import "../includes/subscribe.scss";
+
+.popular-posts {
+
+    position: relative;
+    @include margin-top(30, 25);
+
+    &::before {
+        position: absolute;
+        width: 100%;
+        content: '';
+        border-bottom: 1px solid #000;
+        @media only screen and (max-width: 1200px) {
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+    }
+
+    &__title {
+        text-align: left;
+        @include font-size(30, 28);
+        @include line-height(70, 60);
+        font-weight: 300;
+        text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.6);
+        @media only screen and (max-width: 1200px) {
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    &__flex {
+        @include margin-top(20, 15);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
+
+
+@import '../mixins-for-pugs/pug-post-sideBar';

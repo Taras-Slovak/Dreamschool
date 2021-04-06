@@ -1,0 +1,114 @@
+.subscribe {
+    position: relative;
+    @include margin-top(30, 25);
+
+    &::before {
+        position: absolute;
+        width: 100%;
+        content: '';
+        border-bottom: 1px solid #000;
+
+        @media only screen and (max-width: 1200px) {
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+    }
+
+    &__title {
+        @include padding-top(20, 15);
+        text-align: center;
+        @include font-size(26, 24);
+        @include line-height(35, 30);
+        font-weight: 300;
+        text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.6);
+
+        @media only screen and (max-width: 1200px) {
+            color: rgb(255, 255, 255);
+
+        }
+    }
+
+    &__form {
+       
+        @include margin-top(25, 20);
+        padding: 1em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        border-color: rgba(0, 0, 0, 0.144);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 15px;
+        box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+    }
+
+    &__item {
+        @include width(350, 250);
+        @include margin-top(22, 12);
+        @include margin-bottom(22, 12);
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    &__input {
+        padding-left: 10px;
+        border-radius: 25px;
+        height: 40px;
+        width:  100%;
+        transition: all 0.3s ease;
+        filter: drop-shadow(0px 0px 3px #414141);
+
+
+        &[type=text],
+        &[type=tel]:valid {
+            filter: drop-shadow(0px 0px 3px #41a513);
+        }
+
+        &:invalid {
+            filter: drop-shadow(0px 0px 3px #be1725);
+        }
+
+        &:focus {
+
+            filter: drop-shadow(0px 0px 3px #06cdff);
+        }
+    }
+
+
+    &__label {
+        position: absolute;
+        left: 25%;
+        top: 10px;
+        @include font-size(18, 14);
+        font-weight: 200;
+        transition: all 0.3s ease;
+        pointer-events: none;
+
+    }
+
+    &__btn {
+        display: block;
+        padding: 0.4em 0.9em;
+        margin: auto;
+        @include font-size(20, 14);
+        font-weight: 400;
+        color: #fff;
+        background-color:#2177bd;
+        border-radius: 255px;
+        box-shadow: 0 0 5px 4px #25252526;
+        transition: all .2s ease;
+        transform: scale(1);
+
+        &:hover {
+            background-color: rgb(255, 217, 0);
+            color: rgb(0, 0, 0);
+
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+}

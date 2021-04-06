@@ -1,0 +1,118 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+/*<===================**********--MAIN--**********===================> */
+
+.main {
+    
+    display: flex;
+    justify-content: space-between;
+    @include padding-bottom(100, 30);
+}
+
+.publication {
+    @include margin-top(240, 100);
+    flex-basis: 75%;
+    @include margin-left(28, 10);
+    @include margin-right(28, 10);
+
+
+
+    @media only screen and (max-width: 1200px) {
+        flex-basis: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__title {
+        @include font-size(54, 28);
+        @include line-height (60, 35);
+        font-weight: 300;
+        text-align: center;
+        color: rgb(54, 54, 54);
+        text-shadow: 1px 1px 4px rgba(30, 30, 30, 0.6);
+    }
+
+    &__btn {
+        display: block;
+        width: max-content;
+        height: max-content;
+        @include margin-top(50, 30);
+        padding: 0.7rem 0.7rem;
+        @include font-size(20, 14);
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        background-color: rgb(33, 119, 189);
+        border-radius: 10px;
+        transition: all 0.4s;
+        box-shadow: 0px 0px 5px 4px #25252526;
+        i{
+            padding-right: 7px;
+        }
+
+        @media only screen and (max-width: 820px) {
+            margin-top: 2rem;
+        }
+
+        &:hover {
+            background-color: gold;
+            color: black;
+            box-shadow: 0px 0px 5px 2px #65c04a73;
+        }
+
+        &:active {
+            transform: scale(0.90)
+        }
+    }
+}
+
+.add-text {
+    width: 100%;
+    @include margin-top(40, 20);
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title{
+        text-align: left;
+        @include font-size(30, 20);
+        @include line-height (60, 30);
+        color: rgb(54, 54, 54);
+        text-shadow: 1px 1px 1px rgba(30, 30, 30, 0.144);
+        font-weight: 300;
+        span{
+            color: rgb(0, 21, 209);
+            font-weight: 400;
+        }
+    }
+    
+}
+
+@import '_publication.scss';
+
+.sidebar {
+    @include padding-top(220, 90);
+    @include padding-left(30, 5);
+    @include padding-right(30, 5);
+    @include padding-bottom(30, 5);
+
+    flex-basis: 25%;
+    flex-grow: 1;
+    min-width: 420px;
+    height: auto;
+    
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: 20px;
+        padding-bottom: 100px;
+        width: 90%;
+        min-width: 320px;
+    }
+}
+
+
+
+
+@import '_sidebar.scss';

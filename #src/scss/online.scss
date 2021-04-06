@@ -1,0 +1,43 @@
+@import 'includes/!CONFIG.scss';
+
+@import 'includes/variables.scss';
+
+@import 'mixins/mixin-font.scss';
+
+@import 'mixins/mixin-font-size.scss';
+
+@import 'includes/reset.scss';
+
+@import 'includes/fonts';
+
+
+html {
+    width: 100%;
+    @include font-size(16, 14);
+    
+}
+
+
+.body {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+    max-width: 1200px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin: auto;
+
+}
+
+@import 'includes/animation.scss';
+
+@import 'includes/scroller.scss';
+
+@import 'mixins-for-pugs/pug-modal.scss';
+
+@import 'mixins-for-pugs/pug-form.scss';
+
+@import 'includes/glider.scss';
+
+@import 'online/style.scss';

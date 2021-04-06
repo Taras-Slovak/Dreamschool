@@ -1,0 +1,178 @@
+@import '../mixins/mixin-font-size.scss';
+
+/*<===================**********--APPOINTMENT--**********===================> */
+.appointment {
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(#171f38c5, #171f38b6), url(../images/odesa.webp);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+
+    &__title {
+        color: white;
+        @include font-size(60, 36);
+        @include line-height(60, 50);
+        font-weight: 200;
+
+    }
+
+    &__sub-title {
+        margin-top: 106px;
+        color: white;
+        @include font-size(22, 20);
+        font-weight: 200;
+    }
+
+    &__info {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tel {
+        position: relative;
+        width: max-content;
+        margin: auto;
+        padding-bottom: 2px;
+        @include font-size(42, 32);
+        font-weight: 300;
+        line-height: 60px;
+        color: rgb(0, 255, 0);
+
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: auto;
+            height: 3px;
+            transform: scaleY(0);
+            background-color: #ffffff;
+            transition: transform 0.4s;
+        }
+
+        &:hover {
+            &:after {
+                transform: scaleY(1);
+            }
+        }
+    }
+
+    &__p {
+        padding-bottom: 2rem;
+        font-weight: 300;
+        line-height: 45px;
+        @include font-size(32, 28);
+        color: #00ff00;
+
+
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+
+        @media only screen and (max-width:1170px) {
+            flex-direction: column;
+
+        }
+
+        div {
+            margin: 2em 0 0 0;
+
+            @media only screen and (max-width:1170px) {
+                margin: 1rem;
+
+
+            }
+        }
+
+        input {
+
+            max-width: 230px;
+
+            @media only screen and (max-width:1170px) {
+                max-width: 350px;
+
+            }
+        }
+
+        button {
+            width: max-content;
+            height: max-content;
+            margin: 0px;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            color: floralwhite;
+            font-weight: 400;
+
+            @media only screen and (max-width:1170px) {
+                margin: 1rem auto 2rem auto;
+
+            }
+
+            &:hover {
+                border-color: #1B6F3B;
+                background-color: #1B6F3B;
+            }
+        }
+
+    }
+
+
+
+    &__text {
+        margin-top: 58px;
+        color: white;
+        font-weight: 300;
+        @include font-size(22, 18);
+        line-height: 2.5rem;
+    }
+
+    &__footer {
+        margin-top: 12rem;
+        color: white;
+        font-weight: 300;
+        @include font-size(16, 14);
+        line-height: 1.6rem;
+
+    }
+}
+
+
+.appointment .alert {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 3rem;
+    text-align: center;
+    @include font-size(22, 18);
+    line-height: 22px;
+
+    @media only screen and (max-width:1170px) {
+        margin-bottom: 1rem;
+    }
+}
+
+.appointment small {
+    position: absolute;
+    margin-top: -3rem;
+    width: 280px;
+
+    @media only screen and (max-width:1170px) {
+        max-width: 250px;
+        position: static;
+        margin: 0 auto 1em auto;
+        text-align: center;
+    }
+
+}
+
+.appointment .alert-success {
+    color: rgb(55, 221, 55);
+ 
+}

@@ -1,0 +1,179 @@
+@import '../mixins/mixin-font-size.scss';
+
+.card {
+    
+
+    &__img {
+        margin-bottom: -17px;
+        width: 85px;
+        height: auto;
+        filter: drop-shadow(2px 2px 2px #444444);
+
+    }
+
+    &__title {
+        margin-top: 0px;
+        @include font-size(22, 18);
+        font-weight: 400;
+        color: #333333;
+    }
+
+    &__sub-title {
+        margin-top: 20px;
+        @include font-size(18, 16);
+        font-weight: 500;
+        color: #808080;
+    }
+
+    &__text {
+        max-width: 370px;
+        margin: auto;
+        margin-top: 15px;
+        @include font-size(16, 14);
+        font-weight: 400;
+        line-height: 22px;
+        color: #686868;
+    }
+}
+
+
+@mixin card-pay {
+
+    .card-pay {
+        width: 100%;
+
+        &__images {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        &__img {
+            margin: -15px 2rem ;
+            width: 4rem;
+            height: auto;
+            filter: drop-shadow(1px 1px 2px #000000);
+        }
+
+        &__title {
+            text-align: center;
+            @include font-size(48, 32);
+            font-weight: 100;
+            text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);
+        }
+
+        &__sub-title {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            @include font-size(36, 24);
+            font-weight: 100;
+            text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);
+        }
+
+        &__text {
+            width: fit-content;
+            margin: auto;
+            @include font-size(16, 16);
+            line-height: 22.4px;
+            font-weight: 400;
+            color: #696969;
+
+
+            li {
+                &::before {
+                    content: "* ";
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@mixin card-studios {
+    .card-studios {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5rem;
+        width: auto;
+        background-color: #f5f5f5;
+        filter: drop-shadow(2px 2px 3px #444444);
+        border-radius:10px;
+        &__img {
+            width: 10rem;
+            height: auto;
+            align-self: center;
+            filter: drop-shadow(1px 1px 2px #000000);
+        }
+
+        &__body {
+            width: auto;
+        }
+
+        &__title {
+
+            text-align: center;
+            @include font-size(22, 20);
+            font-weight: 400;
+            color: #333333;
+        }
+
+        &__text {
+            padding: 1.5rem;
+            width: auto;
+            @include font-size(16, 16);
+            font-weight: 300;
+            line-height: 22px;
+            color: #696969;
+        }
+    }
+}
+
+@mixin card-big {
+
+    .card-big {
+        width: 355px;
+        height: 100%;
+        margin: auto;
+        padding: 34px 34px 0 34px;
+        display: flex;
+        flex-direction: column;
+        
+
+        @media only screen and (max-width:1130px) {
+            width: 100%;
+            max-width: 600px;
+        }
+
+
+        &__img {
+            display: block;
+            width: 100%;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 4px 0px rgb(50, 50, 50);
+        }
+
+        &__title {
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 100;
+            font-size: 32px;
+            line-height: 45px;
+            color: #111111;
+        }
+
+        &__txt {
+            margin: 1rem 0;
+            width: auto;
+            text-align: start;
+            font-weight: 300;
+            line-height: 22px;
+            font-size: 16px;
+            color: #696969;
+        }
+
+    }
+}

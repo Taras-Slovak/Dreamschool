@@ -1,0 +1,112 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+/*<===================**********--POST--**********===================> */
+
+.post {
+    width: 100%;
+    @include padding(40, 20);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.12);
+    border-radius:10px;
+
+    &__title {
+        @include font-size(26, 18);
+        font-weight: 300;
+        @include line-height(35, 30);
+        text-align: center;
+        text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.18);
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        @include margin-top(35, 25);
+        @include margin-bottom(35, 25);
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        box-shadow: 2px 2px 15px 2px #252525d7;
+    }
+
+    &__sub-title {
+        display: block;
+        @include margin-top(30, 25);
+        @include margin-bottom(15, 10);
+        @include font-size(24, 20);
+        font-weight: 400;
+        text-indent: 20px;
+        text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.18);
+    }
+
+    &__txt {
+        @include margin-top(20, 6);
+        @include margin-bottom(20, 6);
+        @include font-size(20, 18);
+        @include line-height(27, 20);
+        font-weight: 300;
+        text-indent: 20px;
+        text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.18);
+    }
+
+    &__video {
+        display: block;
+        width: 80%;
+        margin: auto;
+        @include margin-top(35, 25);
+        @include margin-bottom(35, 25);
+        box-shadow: 2px 2px 15px 2px #252525d7;
+    }
+
+    &__picture {
+        @include margin-top(35, 25);
+        @include margin-bottom(35, 25);
+    }
+
+    &__pic {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: auto;
+        border-radius: 15px;
+        box-shadow: 2px 2px 15px 2px #252525d7;
+        transition: all .3s;
+        cursor: zoom-in;
+    }
+
+    &__input {
+        display: none;
+
+        &:checked {
+            ~ {
+                .post__label {
+                    >picture {
+                        .post__pic {
+                            max-width: 100%;
+                            cursor: zoom-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        color: rgb(27, 85, 221);
+        @include font-size(16, 14);
+        transition: all 0.4s;
+
+        &:hover {
+
+            @include font-size(17, 15);
+        }
+
+    }
+
+}
+
+
+@import "../includes/yt-lazyload.scss";

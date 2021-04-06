@@ -1,0 +1,54 @@
+@import '../mixins/mixin-font-size.scss';
+
+/*<===================**********--BACKGROUND--**********===================> */
+
+.top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  // @include margin-top(120,70);
+  background-color: #38383881;
+  overflow: hidden;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  @media only screen and(max-width:680px) {
+    background:linear-gradient((#38383881), (#38383881)), url('../images/bg-phone.webp');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+}
+
+.background {
+
+  @media only screen and(max-width:680px) {
+    display: none;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+  }
+
+  &__video {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media only screen and (max-width:1450px) {
+      width: max-content;
+    }
+
+  }
+
+
+}

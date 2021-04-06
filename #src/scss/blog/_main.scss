@@ -1,0 +1,66 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+/*<===================**********--MAIN--**********===================> */
+
+.main {
+    
+    display: flex;
+    justify-content: space-between;
+    @include padding-bottom(100, 30);
+}
+
+.publication {
+    @include margin-top(240, 100);
+    flex-basis: 75%;
+    @include margin-left(28, 10);
+    @include margin-right(28, 10);
+
+
+
+    @media only screen and (max-width: 1200px) {
+        flex-basis: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__title {
+        @include font-size(54, 28);
+        @include line-height (60, 35);
+        font-weight: 300;
+        text-align: center;
+        color: rgb(54, 54, 54);
+        text-shadow: 1px 1px 4px rgba(30, 30, 30, 0.6);
+    }
+
+}
+
+@import "../includes/pagination.scss";
+
+@import '_publication.scss';
+
+.sidebar {
+    @include padding-top(220, 90);
+    @include padding-left(30, 5);
+    @include padding-right(30, 5);
+    @include padding-bottom(30, 5);
+
+    flex-basis: 25%;
+    flex-grow: 1;
+    min-width: 420px;
+    
+    
+
+    @media only screen and (max-width: 1200px) {
+        margin-top: 2em;
+        padding-bottom: 100px;
+        width: 90%;
+        min-width: 320px;
+    }
+}
+
+
+
+
+@import '_sidebar.scss';

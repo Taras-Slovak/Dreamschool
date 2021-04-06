@@ -1,0 +1,74 @@
+@import '../mixins/mixin-font-size.scss';
+
+@import '../mixins-for-pugs/pug-card.scss';
+
+/*<===================**********--STUDIOS 2--**********===================> */
+
+.studios-2 {
+    @include padding-top(100, 80);
+    @include padding-bottom(100, 30);
+
+    &__cards {
+        display: flex;
+        
+        @media only screen and (max-width:1130px) {
+            flex-direction: column;
+            
+        }
+
+    }
+
+    &__card--one {
+        margin: 0 auto 0 auto;
+        padding-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #fcf6ef;
+        box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.54);
+        border-radius: 20px;
+
+    }
+
+    &__card--two {
+        margin: 0 auto 0 auto;
+        padding-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #fefdf9;
+        box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.54);
+        border-radius: 20px;
+        @media only screen and (max-width:1130px) {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            
+        }
+        
+    }
+
+    &__card--three {
+        margin: 0 auto 0 auto;
+        padding-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        background-color: #f8fbfd;
+        box-shadow: 0px 0px 9px 0px rgba(50, 50, 50, 0.54);
+        border-radius: 20px;
+    }
+
+    .modal__wrap {
+        margin: 3rem auto;
+    }
+
+    .modal__btn {
+        color: black;
+        transition: all 0.3s;
+
+        &:hover {
+            color: #1ca81c;
+            border: 2px solid #1ca81c;
+        }
+    }
+}
+
+@include card-studios;

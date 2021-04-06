@@ -1,0 +1,102 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+/*<===================**********--MAIN--**********===================> */
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.publication {
+    @include margin-top(240, 100);
+    flex-basis: 75%;
+    margin-right: auto;
+    
+    @media only screen and (max-width: 1200px) {
+        flex-basis: 100%;
+
+    }
+
+    &__title {
+        @include font-size(54, 28);
+        @include line-height (75, 35);
+        font-weight: 300;
+        text-align: center;
+        color: rgb(54, 54, 54);
+        text-shadow: 1px 1px 4px rgba(30, 30, 30, 0.6);
+    }
+
+    @media only screen and (max-width: 1200px) {
+        flex-basis: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__btn {
+        display: block;
+        width: max-content;
+        @include margin(35, 25);
+        margin-right: auto;
+        padding: 0.4em 0.8em 0.4em 0.8em;
+        @include font-size(20, 18);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+        background-color: rgb(33, 119, 189);
+        border-radius: 10px;
+        transition: all 0.4s;
+        box-shadow: 0px 0px 5px 4px #25252526;
+
+        &:hover {
+            background-color: gold;
+            color: black;
+            box-shadow: 0px 0px 5px 4px #65c04a5d;
+        }
+
+        &:active {
+
+            transform: scale(0.95);
+        }
+    }
+
+}
+
+@import "../mixins-for-pugs/pug-post(plagin blogPost).scss";
+
+.post-flex {
+    @include margin-top(50, 30);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media only screen and (max-width: 680px) {
+        justify-content: center;
+    }
+
+}
+
+@import '../mixins-for-pugs/pug-preview';
+
+.sidebar {
+    @include padding-top(220, 90);
+    @include padding-left(30, 5);
+    @include padding-right(30, 5);
+    @include padding-bottom(30, 5);
+    flex-basis: 25%;
+    flex-grow: 1;
+    min-width: 420px;
+    
+    @media only screen and (max-width: 1200px) {
+        margin-top: 2em;
+        padding-bottom: 100px;
+        max-width: 90%;
+        min-width: 320px;
+    }
+}
+
+@import '../blog/_sidebar.scss';

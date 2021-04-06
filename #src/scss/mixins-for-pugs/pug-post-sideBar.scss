@@ -1,0 +1,75 @@
+@import "../mixins/mixin-font-size.scss";
+
+@import "../includes/variables.scss";
+
+.post-sideBar {
+  display: block;
+  width: 400px;
+  margin-bottom: 3rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s;
+
+  @media only screen and (max-width: 1000px) {
+    width: 350px;
+  }
+
+  @media only screen and (max-width: 850px) {
+    width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0px 1px 5px 3px gold;
+  }
+
+  &__pic {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__title {
+    @include margin-top(10, 5);
+    @include padding(10, 5);
+    @include line-height(25, 20);
+    @include font-size(20, 18);
+    color: rgb(26, 26, 26);
+  }
+
+  &__txt {
+
+    p{
+      @include padding(10, 5);
+      @include font-size(18, 16);
+      font-weight: 300;
+      color: rgb(26, 26, 26);
+      @include line-height(25, 20);
+    }
+
+  
+  }
+
+  &__info {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    color: #0e4fa5;
+  }
+
+}
