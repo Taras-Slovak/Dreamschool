@@ -1,0 +1,91 @@
+extends ../common/_layout.pug
+
+block title 
+    title Dream School | post
+
+block links
+    
+    link(rel="stylesheet", href="../css/post.min.css")
+    
+
+block content
+
+        header.header
+            include ../includes/_progress-line.pug 
+            include _nav-bar.pug
+
+        main.main
+
+            article.publication
+
+                h1.publication__title Навчальний портал школи "Dream School"
+
+                a.publication__btn(href="../blog.html") <i class="fas fa-home"></i> ДО ГОЛОВНОЇ БЛОГУ 
+
+                include ../mixins/_mixin-post(plagin blogPost).pug
+
+                +post('Як рахувати десятками','post_5-1','Десяток — одиниця для лічби, яка дорівнює десяти однаковим предметам.',
+                'post_5-2','На картинці  10  ягід полуниці або  1  десяток полуниць.',
+                'post_5-3','На картинці  10  ягід полуниці або  1  десяток полуниць.',
+                'post_5-4','1 д.+1 д.=2 д.','https://miyklas.com.ua/p/matematika/1-klas/chislo-11-20-17481/desiatok-40087/re-da28cd12-69d2-447f-aca2-1b3679697d59')
+
+            
+                a.publication__btn( href="../blog.html") <i class="fas fa-home"></i> ДО ГОЛОВНОЇ БЛОГУ 
+
+                section.post-flex
+
+                    include ../mixins/_mixin-preview.pug
+
+                    +post-preview('post_3-1','Водень: від таємничої субстанції — до палива майбутнього', '3')
+
+                    +post-preview('post_4-1','Збройні сили України. Порівняння з іншими державами','4')
+
+                    +post-preview('post_5-1','Як рахувати десятками','5')
+
+                    +post-preview('post_6-1','Складові комп"ютера та їх призначення', '6')
+
+                    +post-preview('post_7-1','10 дивовижних явищ природи', '7')
+
+                    +post-preview('post_2-1','Як будували піраміди в Єгипті. Цікаві факти','2')
+
+                    +post-preview('post_8-1','Як навчити дитину писати?', '8')
+
+                    +post-preview('post_9-1','Роль Переяславської ради в українській історії', '9')
+
+                    +post-preview('post_10-1','Вода: електропровідність і теплопровідність. Одиниці вимірювання електропровідності води', '10')
+
+                    +post-preview('Цікаві та невідомі факти про генія української літератури Тараса Шевченка', '11')
+
+                    +post-preview('post_12-1','Засоби милозвучності української мови', '12')
+
+                    +post-preview('post_1-1','Олімпійські ігри: перемоги, якими пишається незалежна Україна','1')  
+
+            article.sidebar(data-da=".navbar__mobile, 1200, last")
+                include _sidebar.pug
+                   
+
+        footer.footer 
+
+ 
+block script
+
+    
+
+    script( src="../js/yt-lazyload.min.js")
+
+    script( src="../js/navBar.min.js")  
+
+    script( src="../js/scroller.min.js")
+    
+    script( src="../js/fontawesome.min.js")
+
+    script(src="../js/sortTags.min.js")
+
+    script( src="../js/search.min.js")
+
+    script( src="../js/dynamicAdapt.min.js")
+
+    script( src="../js/post.min.js")
+    
+    script(defer src="../js/modal.min.js")
+    

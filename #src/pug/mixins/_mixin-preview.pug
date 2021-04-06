@@ -1,0 +1,43 @@
+mixin post-preview(img,txt,post)
+
+    div.post-preview
+
+        a.post-preview__link( href=`post-${post}.html`) 
+
+            .post-preview__pic
+                picture
+
+                    source(
+                        type="image/webp", 
+                        srcset = `../images/posts/${img}.webp`)
+
+                    img.post-preview__img(
+                        src=`../images/posts/${img}.jpg`,
+                        alt="some_picture")
+
+            h3.post-preview__title=txt
+
+        <span class="post-preview__views"><i class="far fa-eye"></i> 77</span>
+
+
+
+mixin blog-preview(img,txt,post)
+
+    div.post-preview
+
+        a.post-preview__link( href=`posts/post-${post}.html`)
+        
+            .post-preview__pic
+                picture
+
+                    source(
+                        type="image/webp", 
+                        srcset = `../images/posts/${img}.webp`)
+
+                    img.post-preview__img(
+                        src=`../images/posts/${img}.jpg`,
+                        alt="some_picture")
+        
+            h3.post-preview__title=txt
+
+        <span class="post-preview__views"><i class="far fa-eye"></i> 77</span>

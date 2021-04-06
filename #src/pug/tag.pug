@@ -1,0 +1,50 @@
+extends common/_layout.pug
+
+block title
+    title Dream School | blog
+
+block links
+    
+    link(rel="stylesheet", href="css/tag.min.css")
+
+block content
+
+        header.header 
+            include includes/_progress-line.pug
+            
+            include pages/_tag/_nav-bar.pug
+
+        main.main
+
+            article.publication
+
+                include pages/_tag/_publication.pug
+    
+
+            article.sidebar(data-da=".navbar__mobile, 1200, last")
+
+                include pages/_tag/_sidebar.pug
+
+
+        footer.footer 
+
+ 
+block script
+
+    script( src="js/navBar.min.js") 
+
+    script( src="js/scroller.min.js")
+    
+    script( src="js/fontawesome.min.js")
+
+    script( src="js/dynamicAdapt.min.js")
+
+    script(src="js/sortTags.min.js")
+
+    script(defer src="js/modal.min.js")
+
+
+   
+    
+
+    

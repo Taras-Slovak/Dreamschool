@@ -1,0 +1,70 @@
+.wrapper
+
+
+    h2.appointment__title(data-animation="slideInUp") Записуйтесь на зустріч у школі!
+
+
+    h2.appointment__sub-title(data-animation="slideInUp") Зробіть це просто зараз, не відкладайте!
+
+
+    .appointment__info(data-animation="fadeIn")
+
+        a.appointment__tel(href="tel:+380937864410" ) +38 (093) 786 44 10 
+                
+        p.appointment__p (очна форма)
+
+
+        a.appointment__tel(href="tel:+380680667710" ) +38 (068) 774 33 66
+
+        a.appointment__tel(href="tel:+380933013002" ) +38 (093) 960 97 12 
+        
+        p.appointment__p (дистанційна форма)
+
+
+    div.alert.alert-success Дякую, Ваші контактні дані прийнято, очікуйте двінка
+
+    form.form(action="/" )
+               
+        .form__item
+            
+            label.form__label(for="formName" ) 
+
+            input.form__input#formName(type="text" placeholder="Прізвище та ім'я:" required)
+
+            
+        .form__item
+
+            label.form__label(for="phone" ) 
+
+            small.invalid-feedback Телефон повинен містити щонайменше 10 символів
+
+            input.form__input#phone(type="tel" placeholder="Телефон:" required)
+
+
+        .form__item
+
+            label.form__label(for="email") 
+
+            input.form__input#email(type="email" placeholder="E-mail:" )
+
+
+        .form__item
+            button.form__btn(type="submit") Записатися на зустріч
+
+    
+
+    .appointment__text
+
+        p(data-animation="slideInUp") м. Одеса
+        p(data-animation="slideInLeft") вул. Старопортофранківська, 101
+        p(data-animation="slideInRight") вул. Чубаївська, 27
+
+    div.partners
+
+        include _partners.pug
+
+    .appointment__footer(data-animation="zoomIn")
+
+        p Альтернативна школа з мультипрофільною освітою.
+        p Очна, дистанційна форми навчанн
+        p Провідні фахівці міста Одеси     

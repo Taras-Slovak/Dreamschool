@@ -1,0 +1,88 @@
+mixin card(img, title, subTitle, text)
+
+    .card
+
+        //- .card__img
+        //-     img(src=`svg/${img}.svg`, alt="img")
+
+        svg.card__img
+            use(xlink:href=`svg/advantages.svg#${img}`)
+
+            
+
+        h3.card__title #{title}  
+
+        h4.card__sub-title #{subTitle} 
+
+        p.card__text #{text}    
+
+
+        
+
+mixin card-pay(img_1, img_2, title, price, ...txt)
+
+    .card-pay
+
+        .card-pay__images
+
+            svg.card-pay__img
+                use(xlink:href=`svg/payment.svg#${img_1}`)
+
+            svg.card-pay__img
+                use(xlink:href=`svg/payment.svg#${img_2}`)
+
+        
+
+        h3.card-pay__title #{title}  
+
+        h4.card-pay__sub-title #{price} 
+
+        ul.card-pay__text 
+
+            each item in txt
+                li=item
+               
+
+
+mixin card-studios(img, title, txt)
+    
+    .card-studios
+
+        svg.card-studios__img
+                use(xlink:href=`svg/studios.svg#${img}`)
+    
+
+        .card-studios__body
+
+            h3.card-studios__title #{title}
+
+            p.card-studios__text #{txt}
+
+
+
+mixin card-big(img, title, ...txt)
+
+    .card-big
+
+        picture.card-big__picture
+            source(
+                type="image/webp", 
+                srcset = `images/${img}.webp 1x, images/${img}@2x.webp 2x, images/${img}@3x.webp 3x, images/${img}@4x.webp 4x`)
+
+            img.card-big__img(
+                src=`images/${img}.jpg`,
+                srcset= `images/${img}@2x.jpg 2x, images/${img}@3x.jpg 3x, images/${img}@4x.jpg 4x` 
+                alt="some_picture")
+
+        .card-big__content
+
+            h3.card-big__title #{title} 
+
+            each item in txt
+
+                p.card-big__txt=item
+
+
+
+
+    

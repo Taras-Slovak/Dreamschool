@@ -1,0 +1,11 @@
+.myPlayer#myPlayer
+    video.myPlayer__video(controls='' src='video/promo.mp4' poster="images/poster.webp")
+    button.myPlayer__btn
+        svg.myPlayer__svg#playpause(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' xmlns:xlink='http://www.w3.org/1999/xlink')
+            title Play
+            polygon#leftbar(points='12,0 25,11.5 25,39 12,50')
+            polygon#rightbar(points='25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39')
+            animate#lefttopause(to='7,3 19,3 19,47 7,47' xlink:href='#leftbar' attributeName='points' dur='.3s' begin='indefinite' fill='freeze')
+            animate#lefttoplay(to='12,0 25,11.5 25,39 12,50' xlink:href='#leftbar' attributeName='points' dur='.3s' begin='indefinite' fill='freeze')
+            animate#righttopause(to='31,3 43,3 43,26 43,47 31,47' xlink:href='#rightbar' attributeName='points' dur='.3s' begin='indefinite' fill='freeze')
+            animate#righttoplay(to='25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39' xlink:href='#rightbar' attributeName='points' dur='.3s' begin='indefinite' fill='freeze')

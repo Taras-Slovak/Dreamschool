@@ -1,0 +1,74 @@
+#comments-content.comments
+    h3.comments__count
+        span#comments-count 4
+        |  Comments
+    #wrap-comment-form
+        #comment-form.row
+            h2.comments__reply
+                | Add comment
+                small
+                    a#cancel-comment-reply-link(onclick='Comment.cancel()' style='display: none;' rel='nofollow' title='Cancel reply') ×
+            form.comments__form
+                #comment_flash_message
+                // Name Field
+                .form-group
+                    input.input(placeholder='Name' name='author' type='text')
+                // Email Field
+                .form-group
+                    input.input(placeholder='Email' name='email' type='text')
+                // Content Field
+                .form-group
+                    textarea#comment-text.textarea(placeholder='Leave a comment ...' name='content')
+                input(name='post_id' type='hidden' value='')
+                // Submit Field
+                .form-group
+                    button.btn.btn--red(type='submit' onclick='Comment.saveButton(event)') Send
+    ul.comments__list
+        li.comment__list-item
+            #comment-5.comment
+                .comment__avatar
+                    img(src='http://www.gravatar.com/avatar/061645c56c531a8abcb94a7ef985a0c9/?d=wavatar&r=pg')
+                .comment__content
+                    .comment__header
+                        span.comment__name Тарас
+                        a.comment__date(href='#comment-5')
+                            | 3 hours ago
+                    .comment__text sssssssssss
+                    .comment__footer
+                        a.comment__reply(href='#' onclick="Comment.replay(event,'5')") Reply
+        li.comment__list-item
+            #comment-6.comment
+                .comment__avatar
+                    img(src='http://www.gravatar.com/avatar/4d9ac948e0dc5e339177a5d2a48fa685/?d=wavatar&r=pg')
+                .comment__content
+                    .comment__header
+                        span.comment__name Тарас
+                        a.comment__date(href='#comment-6')
+                            | 3 hours ago
+                    .comment__text ііііііііііііі
+                    .comment__footer
+                        a.comment__reply(href='#' onclick="Comment.replay(event,'6')") Reply
+        li.comment__list-item
+            #comment-7.comment
+                .comment__avatar
+                    img(src='http://www.gravatar.com/avatar/f817ff00f0b0f77a56f00d1c0c55296d/?d=wavatar&r=pg')
+                .comment__content
+                    .comment__header
+                        span.comment__name ііііііі
+                        a.comment__date(href='#comment-7')
+                            | 3 hours ago
+                    .comment__text sssssssssss
+                    .comment__footer
+                        a.comment__reply(href='#' onclick="Comment.replay(event,'7')") Reply
+        li.comment__list-item
+            #comment-8.comment
+                .comment__avatar
+                    img(src='http://www.gravatar.com/avatar/09ebb7d672265e27582e96bc1e6a7fe2/?d=wavatar&r=pg')
+                .comment__content
+                    .comment__header
+                        span.comment__name Suoer
+                        a.comment__date(href='#comment-8')
+                            | 17 minutes ago
+                    .comment__text sssssssdddddddaaaaaa
+                    .comment__footer
+                        a.comment__reply(href='#' onclick="Comment.replay(event,'8')") Reply

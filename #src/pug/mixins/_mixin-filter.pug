@@ -1,0 +1,15 @@
+mixin filter(data, name)
+
+    .filter
+
+        -if(data ==='all')
+
+            button.filter__item.filter__item--all(data-filter=data)=name
+
+        -else
+
+            button.filter__item(data-filter=data)=name
+            
+            
+
+

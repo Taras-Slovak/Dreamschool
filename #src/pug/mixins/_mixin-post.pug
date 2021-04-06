@@ -1,0 +1,55 @@
+mixin post(title, picture, ...files)
+    
+    section.post(data-fixer = 'offset')
+
+        h2.post__title #{title}
+
+        picture
+
+            source(
+                type="image/webp", 
+                srcset = `../images/posts/${picture}.webp`)
+
+            img.post__img(
+                src=`../images/posts/${picture}.jpg`,
+                alt="some_picture")
+
+
+        each item in files
+
+            -if(item.length > 50 && item.substr(0, 6) !== "https:" ) 
+
+                p.post__txt(data-animation="fadeIn")=item 
+
+                
+            -else if(item.slice(8,-12) == "youtu.be" ) 
+
+                .post__video(data-animation="fadeIn")
+                    div.yt-lazyload(data-id=item.substr(17), data-thumb="", data-logo="3")
+
+
+            -else if(item.slice(0, 5) === "post_" ) 
+
+                .post__picture(data-animation="fadeIn")
+
+                    input.post__input(id=item type="checkbox")
+                    
+                    label.post__label(for=item)
+
+                        picture
+
+                            source(
+                                type="image/webp", 
+                                srcset = `../images/posts/${item}.webp`)
+
+                            img.post__pic(
+                                src=`../images/posts/${item}.jpg`,
+                                alt="some_picture")
+
+            -else if(item.substr(0, 6) === "https:")
+
+                a.post__link(data-animation="fadeIn" href=`${item}` target="_blank") Джерело: #{item} 
+
+            -else
+
+                h3.post__sub-title(data-animation="fadeIn")=item

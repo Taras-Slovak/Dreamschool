@@ -1,0 +1,40 @@
+
+include ../../mixins/_mixin-card.pug
+include ../../mixins/_mixin-modal.pug
+
+.wrapper
+
+    h2.payment__title(data-animation="slideInUp") ФОРМИ НАВЧАННЯ
+
+
+    .payment__cards
+
+
+        .payment__card--one(data-animation="flipInY")
+
+            +card-pay('boy','girl','Очна','( 4000 грн/міс)','тематичні блоки','індивидуальні навчальні маршрути','практичність засвоєнних знань','тьюторське супроводження','творчі,спортивні,профорієнтаційні студії')
+                       
+            +modal-btn('2','Докладніше')  
+
+            
+            
+        +modal('2')
+            
+        .payment__card--two(data-animation="flipInY" data-animation-delay="300ms")
+
+            +card-pay('winner','gaming','Дистанційна','(750 і 2500 грн/міс)','можливість віддаленного навчання','вибір часу для навчання','структурованний навчальний матеріал','атестація, контроль знань','екстернат (3500 грн/рік)')
+            
+            .payment__group-btn
+
+                +modal-btn('3','Докладніше')
+                  
+               
+
+                a.payment__btn(href="/") Перейти
+
+        +modal('3') 
+
+
+
+
+       

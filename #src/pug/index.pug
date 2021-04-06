@@ -1,0 +1,54 @@
+extends common/_layout.pug
+
+block title
+    title Dream School 
+
+block links
+    meta(property="og:image" content="images/dream-school_meta.webp")
+    link(rel="stylesheet", href="css/index.min.css")
+
+block content
+        
+        section.top  
+            include pages/_index/_top.pug
+
+        section.advantages
+            include pages/_index/_advantages.pug
+                 
+        section.payment
+            include pages/_index/_payment.pug 
+
+        section.slider-video
+            include pages/_index/_slider-video.pug
+
+        section.studios
+            include pages/_index/_studios.pug
+
+        section.studios-2
+            include pages/_index/_studios-2.pug
+
+        section.documents
+            include pages/_index/_documents.pug
+
+        section.appointment     
+            include pages/_index/_appointment.pug
+
+        //- section.partners
+        //-     include pages/_index/_partners.pug
+        
+block script
+
+    script(src="js/animation.js")
+
+    script(src="js/navBar.min.js")
+
+    script(src="js/modal-index.min.js")
+
+    script(src="js/glider.min.js")
+
+    script(src="js/scroller.min.js")
+    
+
+
+
+

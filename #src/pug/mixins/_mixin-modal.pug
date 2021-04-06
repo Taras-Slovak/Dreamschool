@@ -1,0 +1,63 @@
+
+
+mixin modal(number)
+  
+    .modal(id=`myModal_${number}`)
+        .modal__content
+            span.modal__close ×
+
+            h3.form__title Дистанційна форма навчання, екстернат
+
+            p.form__txt Впишіть свої контакти, Ваше ім'я та номер телефону для того, щоб ми розповіли вам детальніше всю потрібну вам інофрмацію.
+
+            div.alert.alert-success.alert-danger Дякую, Ваші контактні дані прийнято, очікуйте двінка
+						
+            form.form(action="/")
+
+                .form__item
+
+                    label.form__label(for=`formName_${number}` ) 
+
+                    input.form__input(id=`formName_${number}` type="text" placeholder="Прізвище та ім'я:"  required)
+
+                                        
+                .form__item
+
+                    label.form__label(for=`phone_${number}`)
+
+                    .invalid-feedback Телефон повинен містити щонайменше 10 символів
+
+                    input.form__input( id =`phone_${number}` type="tel" placeholder="Телефон:" minlength="10" required)
+
+                   
+                .form__item
+
+                    label.form__label(for=`email_${number}`) 
+
+                    input.form__input(id = `email_${number}` type="email" placeholder="E-mail:" )
+
+                .form__item
+
+                    button.form__btn(type="submit") Запис на зустріч 
+
+
+mixin modal-video(number)
+  
+    .modal(id=`myModal_${number}`)
+
+        .modal__content
+            span.modal__close ×
+
+            .modal__video
+
+                video(src="video/promo.mp4" controls="controls")
+    
+
+mixin modal-btn(number,name)
+
+    button.modal__btn(id=`showModal_${number}` type='button') #{name}
+
+
+mixin navbar-modal(number,name)
+
+    .navbar__item(id=`showModal_${number}` ) #{name}

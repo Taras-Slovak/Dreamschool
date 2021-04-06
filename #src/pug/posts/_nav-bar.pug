@@ -1,0 +1,76 @@
+include ../mixins/_mixin-modal.pug
+
+nav.navbar
+        
+    a.navbar__logo(href="../index.html")
+
+        svg
+            use(xlink:href='../svg/logo.svg#logo')
+
+
+    .navbar__burger
+
+        span.navbar__btn
+
+    .navbar__mobile
+
+        .navbar__info
+
+            a.navbar__tel(href="tel:+380937743366") +38 (093) 774 33 66
+
+                svg
+                    use(xlink:href='../svg/info.svg#phone_2')
+
+            a.navbar__tel(href="tel:+380689609712") +38 (068) 960 97 12
+
+                svg
+                    use(xlink:href='../svg/info.svg#phone_1')
+
+            a.navbar__mail(href="mailto:somemail@gmail.com") somemail@gmail.com
+
+                svg
+                    use(xlink:href='../svg/info.svg#gmail')
+    
+        .navbar__items-group
+            
+            a.navbar__item(href="../index.html") ГОЛОВНА
+        
+            a.navbar__item(href="../online.html") ДИСТАНЦІЙНА
+        
+            a.navbar__item(href="../news.html") НОВИНИ
+        
+            a.navbar__item(href="../blog.html") БЛОГ
+
+            +navbar-modal('0','ЗАПИС НА ЗУСТРІЧ')
+
+
+        .navbar__socials
+
+            a.navbar__social(href="https://www.facebook.com/dreamschool.ua/")
+
+                svg
+                    use(xlink:href='../svg/socials.svg#facebook')
+
+
+            a.navbar__social(href="https://www.youtube.com/c/DreamSchoolua/videos")
+
+                svg
+                    use(xlink:href='../svg/socials.svg#youtube')
+
+
+        .navbar__toggle-lang
+
+
+                a.navbar__lang(href="/")
+
+                    svg
+                        use(xlink:href='../svg/lang.svg#eng')
+                
+
+                a.navbar__lang(href="/")
+
+                    svg
+                        use(xlink:href='../svg/lang.svg#russia')
+
+    +modal('0')
+

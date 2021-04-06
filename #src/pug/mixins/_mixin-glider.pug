@@ -1,0 +1,15 @@
+mixin glider(...name)
+  
+    .glider-contain
+        .glider
+
+            each item in name
+            
+                video.glider-item(controls src=`video/${item}.mp4` poster=`images/posters/${item}.webp` )
+
+            
+        button.glider-prev(aria-label='Previous') «
+
+        button.glider-next(aria-label='Next') »
+
+        div.dots(role='tablist')

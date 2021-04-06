@@ -1,0 +1,24 @@
+include ../../mixins/_mixin-card.pug
+
+.wrapper
+
+    h2.advantages__title(data-animation="slideInUp") НАШІ ПЕРЕВАГИ
+
+    ul.advantages__text
+        li(data-animation="slideInRight")
+            a.advantages__link(href="https://drive.google.com/file/d/15YFac3qQscr1JSa-IwlUkTcw5JhIhCtk/view") Ліцензована школа
+        li(data-animation="slideInLeft") Видача документів державного зразка
+        li(data-animation="slideInRight") Безпека і атмосфера прийняття для дітей
+        li(data-animation="slideInLeft") Освіта за блочною системою з елементами понурення в предмет
+
+
+    .advantages__cards
+
+        div( data-animation="fadeIn") 
+            +card('primary', 'Початкова школа', 'УЧЕНЬ','Мотивація и пізнавальна практична діяльність замість оцінок, домашніх завдань і дзвоників')
+    
+        div( data-animation="fadeIn" data-animation-delay="300ms") 
+            +card('secondary', 'Середня школа', 'МАЙСТЕР','Майстер-класи і студії. Придбання різних вмінь та навичок, аби бути готовими до створення чогось особливого для себе і для інших')
+    
+        div( data-animation="fadeIn" data-animation-delay="600ms") 
+            +card('high', 'Старша школа', 'ПРОФІ','Час самовизначення і самоідентифікації. Занурення в обраний профіль і підготовка до майбутньої професії')           

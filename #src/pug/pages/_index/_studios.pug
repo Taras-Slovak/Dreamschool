@@ -1,0 +1,27 @@
+include ../../mixins/_mixin-card.pug
+
+.wrapper
+
+    h2.studios__title(data-animation="slideInUp") Студійні напрямки Dream School
+
+    .studios__cards
+
+        div(data-animation="flipInX" )        
+            +card-studios('english', 'Англійська мова', 'Володіння англійською мовою для дитини - це фундамент її успішного життя в майбутньому.')
+    
+        div(data-animation="flipInX" data-animation-delay="300ms")
+            +card-studios('vocal', 'Вокал', 'Для впевненності в собі, тренування пам"яті та вимови, корисно для роботи дихальних органів.')
+
+        div(data-animation="flipInX" data-animation-delay="600ms")
+            +card-studios('pottery', 'Гончарна студія', 'Робота з глиною розвиває творчий потенціал і дає досвід виготовлення речей власними руками.')
+
+        div(data-animation="flipInX" data-animation-delay="300ms")
+            +card-studios('paint', 'Художня студія', 'Заняття живописом розвивають уяву, дрібну моторику рук і художній смак.')
+
+        div(data-animation="flipInX" data-animation-delay="600ms")
+            +card-studios('architect', 'Архітектурна студія', 'Архітектура, як найбільш комплексна дисципліна, допомагає розкрити справжній талант дитини.')
+    
+        div(data-animation="flipInX" data-animation-delay="700ms")
+            +card-studios('dance', 'Студія танців', 'Хореографія вчить дитину трудитися, адже результат може бути тільки при систематичних заняттях.')
+
+        

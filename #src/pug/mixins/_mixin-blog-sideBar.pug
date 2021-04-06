@@ -1,0 +1,101 @@
+mixin blog-sideBar(post,img,title,...txt)
+
+    a.post-sideBar(data-animation="zoomIn" href=`posts/post-${post}.html`)
+    
+        .post-sideBar__pic
+            picture
+
+                source(
+                    type="image/webp", 
+                    srcset = `../images/posts/${img}.webp`)
+
+                img.post-sideBar__img(
+                    src=`../images/posts/${img}.jpg`,
+                    alt="some_picture")
+    
+        h3.post-sideBar__title=title
+
+        each item in txt
+
+            div.post-sideBar__txt
+
+                p=item
+
+        .post-sideBar__info Кількість переглядів: 777
+
+
+mixin post-sideBar(post,img,title,...txt)
+
+    a.post-sideBar(data-animation="zoomIn" href=`post-${post}.html`)
+    
+        .post-sideBar__pic
+            picture
+
+                source(
+                    type="image/webp", 
+                    srcset = `../images/posts/${img}.webp`)
+
+                img.post-sideBar__img(
+                    src=`../images/posts/${img}.jpg`,
+                    alt="some_picture")
+    
+        h3.post-sideBar__title=title
+
+        each item in txt
+
+            div.post-sideBar__txt
+
+                p=item
+    
+        .post-sideBar__info Кількість переглядів: 777
+
+mixin news-sideBar(news,img,title,...txt)
+
+    a.post-sideBar(data-animation="zoomIn" href=`post-${news}.html`)
+    
+        .post-sideBar__pic
+            picture
+
+                source(
+                    type="image/webp", 
+                    srcset = `../images/posts/${img}.webp`)
+
+                img.post-sideBar__img(
+                    src=`../images/posts/${img}.jpg`,
+                    alt="some_picture")
+    
+        h3.post-sideBar__title=title
+
+        each item in txt
+
+            div.post-sideBar__txt
+
+                p=item
+    
+        .post-sideBar__info Опубліковано: 31-01-2021
+
+
+mixin new-sideBar(news,img,title,...txt)
+
+    a.post-sideBar(data-animation="zoomIn" href=`post-${news}.html`)
+    
+        .post-sideBar__pic
+            picture
+
+                source(
+                    type="image/webp", 
+                    srcset = `../images/posts/${img}.webp`)
+
+                img.post-sideBar__img(
+                    src=`../images/posts/${img}.jpg`,
+                    alt="some_picture")
+    
+        h3.post-sideBar__title=title
+
+        each item in txt
+
+            div.post-sideBar__txt
+
+                p=item
+    
+        .post-sideBar__info Опубліковано: 31-01-2021

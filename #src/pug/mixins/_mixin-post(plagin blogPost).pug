@@ -1,0 +1,45 @@
+mixin post(title, picture, ...files)
+    
+    section.post(data-fixer = 'offset')
+
+        h2.post__title #{title}
+
+        <p class="post__date">Опубліковано: 31-01-2021</p>
+
+        .post__content
+
+            img(
+                src=`../images/posts/${picture}.jpg`,
+                alt="some_picture")
+      
+            each item in files
+
+                -if(item.length > 50 && item.substr(0, 6) !== "https:" ) 
+
+                    p=item 
+
+                    
+                -else if(item.slice(8,-12) == "youtu.be" ) 
+
+                    iframe( width="560" height="315" src=`https://www.youtube.com/embed/${item.substr(17)}` frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+
+
+                -else if(item.slice(0, 5) === "post_" ) 
+
+                    p
+                        img(
+                            src=`../images/posts/${item}.jpg`,
+                            alt="some_picture")
+
+                -else if(item.substr(0, 6) === "https:")
+
+                    p
+
+                        a( href=`${item}` target="_blank") Джерело: #{item} 
+
+                -else
+
+                    h3=item
+    
+        include ../includes/_content-filter-post.pug

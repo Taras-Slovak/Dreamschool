@@ -1,0 +1,58 @@
+mixin blog-sideBar(post,img,title,...txt)
+
+    div.post-sideBar
+
+        a.post__link( href=`posts/post-${post}.html`)
+        
+            .post-sideBar__pic
+                picture
+
+                    source(
+                        type="image/webp", 
+                        srcset = `../images/posts/${img}.webp`)
+
+                    img.post-sideBar__img(
+                        src=`../images/posts/${img}.jpg`,
+                        alt="some_picture")
+        
+            h3.post-sideBar__title=title
+
+            each item in txt
+
+                p.post-sideBar__txt=item
+
+        .post-sideBar__info
+
+            span.post-sideBar__views <i class="far fa-eye"></i> 500
+
+            span.post-sideBar__coments <i class="far fa-comment-dots"></i> 32
+
+
+mixin post-sideBar(post,img,title,...txt)
+
+    div.post__sideBar
+
+        a.post-link( href=`post-${post}.html`)
+        
+            .post-sideBar__pic
+                picture
+
+                    source(
+                        type="image/webp", 
+                        srcset = `../images/posts/${img}.webp`)
+
+                    img.post-sideBar__img(
+                        src=`../images/posts/${img}.jpg`,
+                        alt="some_picture")
+        
+            h3.post-sideBar__title=title
+
+            each item in txt
+
+                p.post-sideBar__txt=item
+        
+        .post-sideBar__info
+
+            p.post-sideBar__views Кількість переглядів: 500
+
+            

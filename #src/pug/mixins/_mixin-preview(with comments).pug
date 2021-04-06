@@ -1,0 +1,49 @@
+mixin post-preview(data,img,txt,post)
+
+    div.post-preview
+
+        a.post-preview__link( href=`post-${post}.html` class=data ) 
+
+            .post-preview__pic
+                picture
+
+                    source(
+                        type="image/webp", 
+                        srcset = `../images/posts/${img}.webp`)
+
+                    img.post-preview__img(
+                        src=`../images/posts/${img}.jpg`,
+                        alt="some_picture")
+
+            h3.post-preview__title=txt
+
+        .post-preview__info
+
+            span.post-preview__views <i class="far fa-eye"></i> 53
+
+            span.post-preview__coments <i class="far fa-comment-dots"></i> 322
+
+mixin blog-preview(data,img,txt,post)
+
+    div.post-preview
+
+        a.post-preview__link( href=`posts/post-${post}.html` class=data )
+        
+            .post-preview__pic
+                picture
+
+                    source(
+                        type="image/webp", 
+                        srcset = `../images/posts/${img}.webp`)
+
+                    img.post-preview__img(
+                        src=`../images/posts/${img}.jpg`,
+                        alt="some_picture")
+        
+            h3.post-preview__title=txt
+
+            .post-sideBar__info
+
+                span.post-sideBar__views <i class="far fa-eye"></i> 500
+
+                span.post-sideBar__coments <i class="far fa-comment-dots"></i> 32
