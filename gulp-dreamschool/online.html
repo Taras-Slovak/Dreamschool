@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream School | online</title>
+    <meta property="og:image" content="images/online-top.webp">
+    <link rel="stylesheet" href="css/online.min.css?t=1659510628886">
+  </head>
+  <body class="body"> 
+    <header class="header"> 
+      <div class="progress-line">
+        <div class="progress-line__item"></div>
+      </div>
+      <nav class="navbar"><a class="navbar__logo" href="index.html">
+          <svg>
+            <use xlink:href="svg/logo.svg#logo"></use>
+          </svg></a>
+        <div class="navbar__burger"><span class="navbar__btn"></span></div>
+        <div class="navbar__mobile">
+          <div class="navbar__info"><a class="navbar__tel" href="tel:+380937743366">+38 (093) 774 33 66
+              <svg>
+                <use xlink:href="svg/info.svg#phone_2"></use>
+              </svg></a><a class="navbar__tel" href="tel:+380689609712">+38 (068) 960 97 12
+              <svg>
+                <use xlink:href="svg/info.svg#phone_1"></use>
+              </svg></a><a class="navbar__mail" href="mailto:somemail@gmail.com">somemail@gmail.com
+              <svg>
+                <use xlink:href="svg/info.svg#gmail"></use>
+              </svg></a><a class="navbar__mail" href="mailto:somemail@gmail.com">somemail@gmail.com
+              <svg>
+                <use xlink:href="svg/info.svg#gmail"></use>
+              </svg></a></div>
+          <div class="navbar__items-group"><a class="navbar__item" href="index.html">ГОЛОВНА</a><a class="navbar__item" href="online.html">ДИСТАНЦІЙНА</a><a class="navbar__item" href="news.html">НОВИНИ</a><a class="navbar__item" href="blog.html">БЛОГ</a><a class="navbar__item" href="https://dream-school.ispringlearn.com/">УВІЙТИ ONLINE</a></div>
+          <div class="navbar__socials"><a class="navbar__social" href="https://www.facebook.com/dreamschool.ua/">
+              <svg>
+                <use xlink:href="svg/socials.svg#facebook"></use>
+              </svg></a><a class="navbar__social" href="https://www.youtube.com/c/DreamSchoolua/videos">
+              <svg>
+                <use xlink:href="svg/socials.svg#youtube"></use>
+              </svg></a></div>
+          <div class="navbar__toggle-lang"><a class="navbar__lang" href="/">
+              <svg>
+                <use xlink:href="svg/lang.svg#ukraine"></use>
+              </svg></a><a class="navbar__lang" href="/">
+              <svg>
+                <use xlink:href="svg/lang.svg#eng"></use>
+              </svg></a><a class="navbar__lang" href="/">
+              <svg>
+                <use xlink:href="svg/lang.svg#russia"></use>
+              </svg></a></div>
+        </div>
+      </nav>
+    </header>
+    <section class="promo"> 
+      <div class="wrapper">
+        <h2 class="promo__title">Dream School online - освіта без стресів</h2>
+        <div class="promo__text">
+          <p class="promo__p">комфортне освітнє середовище для навчання</p>
+          <p class="promo__p">свобода у виборі часу та місця навчання</p>
+          <p class="promo__p">доступ до навчальних матеріалів</p>
+          <p class="promo__p">спілкування з вчителями та однолітками</p>
+        </div>
+        <div class="myPlayer" id="myPlayer">
+          <video class="myPlayer__video" controls="" src="video/promo.mp4" poster="images/poster.webp"></video>
+          <button class="myPlayer__btn">
+            <svg class="myPlayer__svg" id="playpause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Play</title>
+              <polygon id="leftbar" points="12,0 25,11.5 25,39 12,50"></polygon>
+              <polygon id="rightbar" points="25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39"></polygon>
+              <animate id="lefttopause" to="7,3 19,3 19,47 7,47" xlink:href="#leftbar" attributeName="points" dur=".3s" begin="indefinite" fill="freeze"></animate>
+              <animate id="lefttoplay" to="12,0 25,11.5 25,39 12,50" xlink:href="#leftbar" attributeName="points" dur=".3s" begin="indefinite" fill="freeze"></animate>
+              <animate id="righttopause" to="31,3 43,3 43,26 43,47 31,47" xlink:href="#rightbar" attributeName="points" dur=".3s" begin="indefinite" fill="freeze"></animate>
+              <animate id="righttoplay" to="25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39" xlink:href="#rightbar" attributeName="points" dur=".3s" begin="indefinite" fill="freeze"></animate>
+            </svg>
+          </button>
+        </div>
+              <button class="modal__btn" id="showModal_1" type="button">Запис на зустріч</button>
+      </div>
+            <div class="modal" id="myModal_1">
+              <div class="modal__content"><span class="modal__close">×</span>
+                <h3 class="form__title">Дистанційна форма навчання, екстернат</h3>
+                <p class="form__txt">Впишіть свої контакти, Ваше ім'я та номер телефону для того, щоб ми розповіли вам детальніше всю потрібну вам інофрмацію.</p>
+                <div class="alert alert-success alert-danger">Дякую, Ваші контактні дані прийнято, очікуйте двінка</div>
+                <form class="form" action="/">
+                  <div class="form__item">
+                    <label class="form__label" for="formName_1"> </label>
+                    <input class="form__input" id="formName_1" type="text" placeholder="Прізвище та ім'я:" required>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label" for="phone_1"></label>
+                    <div class="invalid-feedback">Телефон повинен містити щонайменше 10 символів</div>
+                    <input class="form__input" id="phone_1" type="tel" placeholder="Телефон:" minlength="10" required>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label" for="email_1"> </label>
+                    <input class="form__input" id="email_1" type="email" placeholder="E-mail:">
+                  </div>
+                  <div class="form__item">
+                    <button class="form__btn" type="submit">Запис на зустріч </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+    </section>
+    <section class="slider-video"> 
+      <div class="wrapper">
+        <h2 class="slider-video__title" data-animation="slideInUp">Щоб дистанційне навчання було захоплюючим та цікавим - <br> ми розробляємо авторські відеоматеріали</h2>
+        <div data-animation="zoomIn" data-animation-delay="300ms"> 
+                <div class="glider-contain">
+                  <div class="glider">
+                    <video class="glider-item" controls src="video/v1.mp4" poster="images/posters/v1.webp"></video>
+                    <video class="glider-item" controls src="video/v2.mp4" poster="images/posters/v2.webp"></video>
+                    <video class="glider-item" controls src="video/v3.mp4" poster="images/posters/v3.webp"></video>
+                    <video class="glider-item" controls src="video/v4.mp4" poster="images/posters/v4.webp"></video>
+                    <video class="glider-item" controls src="video/v5.mp4" poster="images/posters/v5.webp"></video>
+                    <video class="glider-item" controls src="video/v6.mp4" poster="images/posters/v6.webp"></video>
+                    <video class="glider-item" controls src="video/v7.mp4" poster="images/posters/v7.webp"></video>
+                    <video class="glider-item" controls src="video/v8.mp4" poster="images/posters/v8.webp"></video>
+                    <video class="glider-item" controls src="video/v9.mp4" poster="images/posters/v9.webp"></video>
+                    <video class="glider-item" controls src="video/v10.mp4" poster="images/posters/v10.webp"></video>
+                  </div>
+                  <button class="glider-prev" aria-label="Previous">«</button>
+                  <button class="glider-next" aria-label="Next">»</button>
+                  <div class="dots" role="tablist"></div>
+                </div>
+        </div><a class="slider-video__btn" data-animation="flipInX" href="https://www.facebook.com/dreamschool.ua/" target="_blank">МИ НА ФЕЙСБУЦІ</a>
+      </div>
+    </section>
+    <section class="payment">
+      <div class="wrapper">
+        <h2 class="payment__title" data-animation="slideInUp">ФОРМИ  ДИСТАНЦІЙНОГО  НАВЧАННЯ</h2>
+        <div class="payment__cards">
+          <div class="payment__card--one" data-animation="flipInY" data-animation-delay="300ms">
+                  <div class="card-pay">
+                    <div class="card-pay__images">
+                      <svg class="card-pay__img">
+                        <use xlink:href="svg/payment.svg#pic1"></use>
+                      </svg>
+                      <svg class="card-pay__img">
+                        <use xlink:href="svg/payment.svg#pic4"></use>
+                      </svg>
+                    </div>
+                    <h3 class="card-pay__title">Дистанційне навчання &quot;Стандарт&quot;   </h3>
+                    <h4 class="card-pay__sub-title">( 750 грн/міс) </h4>
+                    <ul class="card-pay__text"> 
+                      <li>власний онлайн кабінет</li>
+                      <li>матеріали та розробки уроків</li>
+                      <li>тести та інтерактивні додатки</li>
+                      <li>перевірка тематичних та контрольних робіт</li>
+                      <li>зворотній зв’язок з вчителем</li>
+                      <li>консультація з предмету раз на тиждень</li>
+                      <li>внутрішня соціальна мережа</li>
+                    </ul>
+                  </div>
+            <div class="payment__group-btn">
+                    <button class="modal__btn" id="showModal_2" type="button">Докладніше</button>
+                    <button class="modal__btn" id="showModal_4" type="button">Відео огляд</button>
+            </div>
+          </div>
+                <div class="modal" id="myModal_2">
+                  <div class="modal__content"><span class="modal__close">×</span>
+                    <h3 class="form__title">Дистанційна форма навчання, екстернат</h3>
+                    <p class="form__txt">Впишіть свої контакти, Ваше ім'я та номер телефону для того, щоб ми розповіли вам детальніше всю потрібну вам інофрмацію.</p>
+                    <div class="alert alert-success alert-danger">Дякую, Ваші контактні дані прийнято, очікуйте двінка</div>
+                    <form class="form" action="/">
+                      <div class="form__item">
+                        <label class="form__label" for="formName_2"> </label>
+                        <input class="form__input" id="formName_2" type="text" placeholder="Прізвище та ім'я:" required>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label" for="phone_2"></label>
+                        <div class="invalid-feedback">Телефон повинен містити щонайменше 10 символів</div>
+                        <input class="form__input" id="phone_2" type="tel" placeholder="Телефон:" minlength="10" required>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label" for="email_2"> </label>
+                        <input class="form__input" id="email_2" type="email" placeholder="E-mail:">
+                      </div>
+                      <div class="form__item">
+                        <button class="form__btn" type="submit">Запис на зустріч </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal" id="myModal_4">
+                  <div class="modal__content"><span class="modal__close">×</span>
+                    <div class="modal__video">
+                      <video src="video/promo.mp4" controls="controls"></video>
+                    </div>
+                  </div>
+                </div>
+          <div class="payment__card--two" data-animation="flipInY" data-animation-delay="600ms">
+                  <div class="card-pay">
+                    <div class="card-pay__images">
+                      <svg class="card-pay__img">
+                        <use xlink:href="svg/payment.svg#pic3"></use>
+                      </svg>
+                      <svg class="card-pay__img">
+                        <use xlink:href="svg/payment.svg#pic2"></use>
+                      </svg>
+                    </div>
+                    <h3 class="card-pay__title">Дистанційне навчання &quot;Стандарт +&quot;  </h3>
+                    <h4 class="card-pay__sub-title">(2500 грн/міс) </h4>
+                    <ul class="card-pay__text"> 
+                      <li>можливість віртуальної присутності на уроках школи</li>
+                      <li>додаткові заняття з предмету за розкладом</li>
+                      <li>власний онлайн кабінет</li>
+                      <li>матеріали та розробки уроків</li>
+                      <li>тести та інтерактивні додатки</li>
+                      <li>перевірка тематичних та контрольних робіт</li>
+                      <li>зворотній зв’язок з вчителем</li>
+                      <li>консультація з предмету раз на тиждень</li>
+                      <li>внутрішня соціальна мережа</li>
+                    </ul>
+                  </div>
+            <div class="payment__group-btn">       
+                    <button class="modal__btn" id="showModal_3" type="button">Докладніше</button>
+                    <button class="modal__btn" id="showModal_5" type="button">Відео огляд</button>
+            </div>
+          </div>
+                <div class="modal" id="myModal_3">
+                  <div class="modal__content"><span class="modal__close">×</span>
+                    <h3 class="form__title">Дистанційна форма навчання, екстернат</h3>
+                    <p class="form__txt">Впишіть свої контакти, Ваше ім'я та номер телефону для того, щоб ми розповіли вам детальніше всю потрібну вам інофрмацію.</p>
+                    <div class="alert alert-success alert-danger">Дякую, Ваші контактні дані прийнято, очікуйте двінка</div>
+                    <form class="form" action="/">
+                      <div class="form__item">
+                        <label class="form__label" for="formName_3"> </label>
+                        <input class="form__input" id="formName_3" type="text" placeholder="Прізвище та ім'я:" required>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label" for="phone_3"></label>
+                        <div class="invalid-feedback">Телефон повинен містити щонайменше 10 символів</div>
+                        <input class="form__input" id="phone_3" type="tel" placeholder="Телефон:" minlength="10" required>
+                      </div>
+                      <div class="form__item">
+                        <label class="form__label" for="email_3"> </label>
+                        <input class="form__input" id="email_3" type="email" placeholder="E-mail:">
+                      </div>
+                      <div class="form__item">
+                        <button class="form__btn" type="submit">Запис на зустріч </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal" id="myModal_5">
+                  <div class="modal__content"><span class="modal__close">×</span>
+                    <div class="modal__video">
+                      <video src="video/promo.mp4" controls="controls"></video>
+                    </div>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </section>
+    <section class="documents">
+      <div class="wrapper">
+        <h2 class="documents__title" data-animation="slideInUp">Документи для оформлення в школу</h2>
+        <div class="documents__text--one" data-animation="flipInX">
+          <h3 class="documents__sub-title">Оформлення в 1 клас</h3>
+          <ul class="documents__p-wrap">
+            <li class="documents__p">заява від батьків</li>
+            <li class="documents__p">копія свідоцтва про народження</li>
+            <li class="documents__p">копія паспорту і коду одного з батьків</li>
+            <li class="documents__p">копії документів про пільги</li>
+            <li class="documents__p">медична карточка</li>
+            <li class="documents__p">дві кольорових фотографії 3*4 см</li>
+          </ul>
+        </div>
+        <div class="documents__text--two" data-animation="flipInX">
+          <h3 class="documents__sub-title">Переведення з іншої школи</h3>
+          <ul class="documents__p-wrap">
+            <li class="documents__p">заява від батьків</li>
+            <li class="documents__p">особиста справа учня</li>
+            <li class="documents__p">копія свідоцтва про народження</li>
+            <li class="documents__p">медична карта</li>
+            <li class="documents__p">дві кольорових фотографії 3*4 см</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="appointment">    
+      <div class="wrapper">
+        <h2 class="appointment__title" data-animation="slideInUp">Записуйтесь на зустріч у школі!</h2>
+        <h2 class="appointment__sub-title" data-animation="slideInUp">Зробіть це просто зараз, не відкладайте!</h2>
+        <div class="appointment__info" data-animation="fadeIn"><a class="appointment__tel" href="tel:+380937864410">+38 (093) 786 44 10 </a>
+          <p class="appointment__p">(очна форма)</p><a class="appointment__tel" href="tel:+380680667710">+38 (068) 774 33 66</a><a class="appointment__tel" href="tel:+380933013002">+38 (093) 960 97 12 </a>
+          <p class="appointment__p">(дистанційна форма)</p>
+        </div>
+        <div class="alert alert-success">Дякую, Ваші контактні дані прийнято, очікуйте двінка</div>
+        <form class="form" action="/">
+          <div class="form__item">
+            <label class="form__label" for="formName"> </label>
+            <input class="form__input" id="formName" type="text" placeholder="Прізвище та ім'я:" required>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="phone"> </label><small class="invalid-feedback">Телефон повинен містити щонайменше 10 символів</small>
+            <input class="form__input" id="phone" type="tel" placeholder="Телефон:" required>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="email"> </label>
+            <input class="form__input" id="email" type="email" placeholder="E-mail:">
+          </div>
+          <div class="form__item">
+            <button class="form__btn" type="submit">Записатися на зустріч</button>
+          </div>
+        </form>
+        <div class="appointment__text">
+          <p data-animation="slideInUp">м. Одеса</p>
+          <p data-animation="slideInLeft">вул. Старопортофранківська, 101</p>
+          <p data-animation="slideInRight">вул. Чубаївська, 27</p>
+        </div>
+        <div class="partners">
+          <div class="wrapper">
+            <h2 class="partners__title" data-animation="slideInUp">Наші партнери</h2>
+            <div class="partners__group">
+              <svg class="partners__img" data-animation="flipInY">
+                <use xlink:href="svg/partners.svg#part_1"></use>
+              </svg>
+              <svg class="partners__img" data-animation="flipInY">
+                <use xlink:href="svg/partners.svg#part_6"></use>
+              </svg>
+              <svg class="partners__img" data-animation="flipInY">
+                <use xlink:href="svg/partners.svg#part_3"></use>
+              </svg>
+              <svg class="partners__img" data-animation="flipInY">
+                <use xlink:href="svg/partners.svg#part_4"></use>
+              </svg>
+              <svg class="partners__img" data-animation="flipInY">
+                <use xlink:href="svg/partners.svg#part_5"></use>
+              </svg>
+              <svg class="partners__img" data-animation="flipInY">
+                <use xlink:href="svg/partners.svg#part_2"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="appointment__footer" data-animation="zoomIn">
+          <p>Альтернативна школа з мультипрофільною освітою.</p>
+          <p>Очна, дистанційна форми навчанн</p>
+          <p>Провідні фахівці міста Одеси     </p>
+        </div>
+      </div>
+    </section>
+    <script defer src="js/animation.js?t=1659510628886"> </script>
+    <script src="js/navBar.min.js?t=1659510628886"></script>
+    <script defer src="js/modal-online.min.js?t=1659510628886"></script>
+    <script src="js/player.min.js?t=1659510628886"></script>
+    <script src="js/glider.min.js?t=1659510628886"></script>
+    <script src="js/scroller.min.js?t=1659510628886"></script>
+  </body>
+</html>
